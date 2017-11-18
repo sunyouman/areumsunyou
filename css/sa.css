@@ -215,13 +215,23 @@ h3 {
 .text-black {
   color: #000;
 }
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .page-main, .page-info, .page-location {
-        -moz-background-size: auto;
-        -webkit-background-size: auto;
-        background-attachment: scroll;
-        background-position: top;
-        background-size: auto;
-    }
+
+.page-main:before, .page-info:before, .page-location:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+/* Turn off parallax scrolling for tablets and phones */
+/*    .page-main, .page-info, .page-location {
+        background-attachment: scroll;
+    }
+}*/
