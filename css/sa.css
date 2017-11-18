@@ -215,15 +215,3 @@ h3 {
 .text-black {
   color: #000;
 }
-
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px){
-    .page-main, .page-info, .page-location {
-        /*background-attachment: scroll;*/
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -999999999;
-    }
-}
