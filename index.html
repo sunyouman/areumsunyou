@@ -17,6 +17,16 @@
 <script type="text/javascript" src="./js/jquery.color.js"></script>
 
 <script>
+function isMobile() {
+	var mobileInfo = new Array('Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
+	for (var info in mobileInfo){
+		if (navigator.userAgent.match(mobileInfo[info]) != null){
+			return true;
+		}
+	}
+	return false;
+}
+
 $(document).ready(function()
 {
   $('body, html').css('height',screen.height + 'px');
@@ -25,12 +35,14 @@ $(document).ready(function()
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
     $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
   }, 1000);
+  if (isMobile()) {
   $(window).scroll(function() {
-    var x = $(window).scrollTop();
-    $('.page-main').css('background-position-y', x + 'px');
-    $('.page-info').css('background-position-y', (x-$('.page-info').offset().top) + 'px');
-    $('.page-location').css('background-position-y', (x-$('.page-location').offset().top) + 'px');
-  })
+      var x = $(window).scrollTop();
+      $('.page-main').css('background-position-y', x + 'px');
+      $('.page-info').css('background-position-y', (x-$('.page-info').offset().top) + 'px');
+      $('.page-location').css('background-position-y', (x-$('.page-location').offset().top) + 'px');
+    });
+  }
 });
 
 </script>

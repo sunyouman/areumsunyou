@@ -11,28 +11,27 @@ body, html {
 .page-main, .page-info, .page-location {
   position: relative;
   opacity: 1;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-color: black;
+  min-height: 100%;
 
 }
 .page-main {
   background-image: url("../img_3044.jpg");
-  min-height: 100%;
 }
 
 .page-info {
   background-image: url("../img_2983.jpg");
-  min-height: 100%;
 }
 
 .page-location {
   background-image: url("../img_2965.jpg");
-  min-height: 100%;
 }
 
 .page-invitation {
@@ -57,15 +56,6 @@ body, html {
   border-top: 0px;
 }
 
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
 .main-img {
   width: 30px;
   height: 30px;
@@ -82,14 +72,14 @@ body, html {
 
 .main-name {
   color: #a9a66d;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   font-size: 30px;
   font-family: 'Nanum Pen Script', cursive;
 }
 
 .main-calendar {
   color: #a9a66d;
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 60px;
   line-height: 50px;
   font-family: 'Nanum Pen Script', cursive;
@@ -216,4 +206,10 @@ h3 {
 
 .text-black {
   color: #000;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .page-main, .page-info, .page-location {
+        background-attachment: scroll;
+    }
 }
