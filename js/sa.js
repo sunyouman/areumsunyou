@@ -76,6 +76,12 @@ function setMap() {
   var marker = new naver.maps.Marker({
     position: new naver.maps.LatLng(37.4871272,127.0461243),
     map: map,
-    animation: naver.maps.Animation.BOUNCE
+    animation: naver.maps.Animation.BOUNCE,
+    icon: {
+        content: '<div class="text-center" style="color:red;"><b style="background:white;padding:2px">마켓오 도곡점</b><br><img src="./img/heart.png" class="main-img"></div>',
+        size: new naver.maps.Size(50, 82),
+        origin: new naver.maps.Point(0, 0),
+        anchor: new naver.maps.Point(50, 56)
+    }
   });
 }
