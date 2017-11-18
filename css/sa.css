@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css');
 
 body, html {
-  height: 100%;
+  height: 105%;
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
@@ -12,7 +12,7 @@ body, html {
 .page-main, .page-info, .page-location {
   position: relative;
   opacity: 1;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
