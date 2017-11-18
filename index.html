@@ -24,8 +24,14 @@ $(".main-flower").ready(function()
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
     $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
   }, 1000);
-
+  $(window).scroll(function() {
+    var x = $(window).scrollTop();
+    $('.page-main').css('background-position-y', x + 'px');
+    $('.page-info').css('background-position-y', (x-$('.page-info').offset().top) + 'px');
+    $('.page-location').css('background-position-y', (x-$('.page-location').offset().top) + 'px');
+  })
 });
+
 </script>
 
 </head>
