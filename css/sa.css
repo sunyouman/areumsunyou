@@ -64,7 +64,7 @@ body, html {
 }
 
 .main-text-sm {
-  font-size: 12px;
+  font-size: 20px;
 }
 
 .main-flower {
@@ -74,15 +74,15 @@ body, html {
 .main-name {
   color: #a9a66d;
   margin-bottom: 150px;
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'Nanum Pen Script', cursive;
 }
 
 .main-calendar {
   color: #a9a66d;
   margin-top: 50px;
-  font-size: 60px;
-  line-height: 50px;
+  font-size: 70px;
+  line-height: 60px;
   font-family: 'Nanum Pen Script', cursive;
 }
 
