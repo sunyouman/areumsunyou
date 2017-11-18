@@ -10,42 +10,15 @@
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/sa.css">
 <link href="./css/open-iconic-bootstrap.min.css" rel="stylesheet">
+<link href="./css/animate.css" rel="stylesheet">
 
 <script src="./js/bootstrap.min.js"></script>
 
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=H35JWNBPDKnaZrJi8Gec&submodules=geocoder"></script>
 <script type="text/javascript" src="./js/jquery.color.js"></script>
+<script type="text/javascript" src="./js/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="./js/sa.js"></script>
 
-<script>
-function isMobile() {
-	var mobileInfo = new Array('Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
-	for (var info in mobileInfo){
-		if (navigator.userAgent.match(mobileInfo[info]) != null){
-			return true;
-		}
-	}
-	return false;
-}
-
-$(document).ready(function()
-{
-  $('body, html').css('height',screen.height + 'px');
-  setTimeout(function() {
-    $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
-    $('.main-flower').animate({opacity: 0}, 2000, 'linear');
-    $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
-  }, 1000);
-  if (isMobile()) {
-  $(window).scroll(function() {
-      var x = $(window).scrollTop();
-      $('.page-main').css('background-position-y', x + 'px');
-      $('.page-info').css('background-position-y', (x-$('.page-info').offset().top) + 'px');
-      $('.page-location').css('background-position-y', (x-$('.page-location').offset().top) + 'px');
-    });
-  }
-});
-
-</script>
 
 </head>
 <body>
@@ -76,13 +49,13 @@ $(document).ready(function()
     새로운 마음과 새 의미를 간직하며<br>선유와 아름, 저희 두 사람이 새 출발의 첫 걸음을 내딛습니다.<br>서로를 사랑하고 존중하는 마음으로 올바르게 살 수 있도록<br>축복과 격려 주시면 더 없는 기쁨으로 간직하겠습니다.
 </p>
 <div class="row invitation-name">
-<div class="col-md-6">
+<div class="col-md-12 invitation-table1">
 <table class="table">
   <tr><td class="text-right half-width text-black">父 김 동 율</td><td rowspan="2" class="text-left align-middle half-width">의 아들 <b class="text-black">&nbsp;&nbsp;선 유</b></td></tr>
   <tr><td class="text-right half-width text-black">母 권 영 순</td></tr>
 </table>
 </div>
-<div class="col-md-6">
+<div class="col-md-12 invitation-table2">
 <table class="table">
   <tr><td class="text-right half-width text-black">父 윤 창 덕</td><td rowspan="2" class="text-left align-middle half-width">의 딸 <b class="text-black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아 름</b></td></tr>
   <tr><td class="text-right half-width text-black">母 박 혜 정</td></tr>
@@ -126,41 +99,21 @@ $(document).ready(function()
 
     <div id="map" style="width:100%;height:300px;"></div>
 
-
-    <script>
-    var mapOptions = {
-        center: new naver.maps.LatLng(37.4871272,127.0461243),
-        zoom: 12,
-        draggable: false,
-        pinchZoom: false,
-        scrollWheel: false,
-        keyboardShortcuts: false,
-        disableDoubleTapZoom: true,
-        disableDoubleClickZoom: true,
-        disableTwoFingerTapZoom: true
-    };
-
-    var map = new naver.maps.Map('map', mapOptions);
-    var marker = new naver.maps.Marker({
-      position: new naver.maps.LatLng(37.4871272,127.0461243),
-      map: map,
-      animation: naver.maps.Animation.BOUNCE
-    });
-    </script>
     <div class="row location-text-box ">
     <div class="col-md-12">
       <div class="row" id="location-text">
-        <div class="col-md-6">
+        <div class="col-md-6 location-text-left">
       <span>주소</span><br>
       서울시 강남구 도곡동 177-2<br>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 location-text-right">
       <span>Tel.</span><br>
       02) 3463-2700<br>
-</div><div class="col-md-6">
+</div>
+  <div class="col-md-6 location-text-left">
       <span>지하철</span><br>
       3호선 매봉역 - 2번출구 바로 앞, EBS 맞은편<br>
-</div><div class="col-md-6">
+</div><div class="col-md-6 location-text-right">
       <span>버스</span><br>
       지선(초록) : 3423, 4433, 4426, 4319<br>
       간선(파랑) : 402, 406<br>
