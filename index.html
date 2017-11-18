@@ -17,8 +17,9 @@
 <script type="text/javascript" src="./js/jquery.color.js"></script>
 
 <script>
-$(".main-flower").ready(function()
+$(document).ready(function()
 {
+  $('body, html').css('height',screen.height + 'px');
   setTimeout(function() {
     $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
