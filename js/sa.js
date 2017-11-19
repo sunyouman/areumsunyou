@@ -35,12 +35,12 @@ $(document).ready(function()
   }, 1000);
   if (isMobile()) {
     $('body, html').css('height',screen.availHeight + 'px');
-    $(window).scroll(function() {
-      var x = $(window).scrollTop();
-      $('.page-main').css('background-position-y', x + 'px');
-      $('.page-info').css('background-position-y', (x-$('.page-info').offset().top) + 'px');
-      $('.page-location').css('background-position-y', (x-$('.page-location').offset().top) + 'px');
-    });
+    // $(window).scroll(function() {
+    //   var x = $(window).scrollTop();
+    //   $('.page-main').css('background-position-y', x + 'px');
+    //   $('.page-info').css('background-position-y', (x-$('.page-info').offset().top) + 'px');
+    //   $('.page-location').css('background-position-y', (x-$('.page-location').offset().top) + 'px');
+    // });
   }
   setAnimation();
   setMap();
