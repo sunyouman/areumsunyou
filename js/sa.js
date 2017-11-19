@@ -35,7 +35,6 @@ $(document).ready(function()
   }, 1000);
   if (isMobile()) {
     $('body, html').css('height',screen.availHeight + 'px');
-    $('.page-main').css('height',$(window).height() + 'px');
     $(window).scroll(function() {
       var x = $(window).scrollTop();
       $('.page-main').css('background-position-y', x + 'px');
