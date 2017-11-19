@@ -33,16 +33,16 @@ $(document).ready(function()
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
     $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
   }, 1000);
-  //if (isMobile()) {
-    //$('body, html').css('height',screen.availHeight + 'px');
+  if (isMobile()) {
+    $('body, html').css('height',screen.availHeight + 'px');
+    $('.page-main').css('height',$(window).height + 'px');
     $(window).scroll(function() {
       var x = $(window).scrollTop();
-      $('body, html').css('height',screen.availHeight + 'px');
       $('.page-main').css('background-position-y', x + 'px');
       $('.page-info').css('background-position-y', (x-$('.page-info').offset().top) + 'px');
       $('.page-location').css('background-position-y', (x-$('.page-location').offset().top) + 'px');
     });
-  //}
+  }
   setAnimation();
   setMap();
 });
