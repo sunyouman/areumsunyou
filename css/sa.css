@@ -9,7 +9,7 @@ body, html {
   height: 100%;
 }
 
-.page-main, .page-info, .page-location {
+body, .page-info, .page-location {
   position: relative;
   opacity: 1;
   background-attachment: fixed;
@@ -26,6 +26,10 @@ body, html {
 
 body {
   background-image: url("../img_3044.jpg");
+}
+
+.page-main {
+  min-height: 100%;
 }
 
 .page-info {
