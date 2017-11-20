@@ -23,7 +23,8 @@ body, html {
   min-height: 100%;
 
 }
-.page-main {
+
+body {
   background-image: url("../img_3044.jpg");
 }
 
