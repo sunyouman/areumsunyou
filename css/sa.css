@@ -215,7 +215,7 @@ h3 {
 }
 
 @media only screen and (max-device-width: 1024px) {
-    .page-main, .page-info, .page-location {
+    body, .page-main, .page-info, .page-location {
         background-attachment: scroll;
     }
 }
