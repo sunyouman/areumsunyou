@@ -4,12 +4,14 @@
 
 body, html {
   margin: 0;
+  padding: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
   height: 100%;
+  min-height: 100%;
 }
 
-body, .page-info, .page-location {
+.page-main, .page-info, .page-location {
   position: relative;
   opacity: 1;
   background-attachment: fixed;
@@ -23,13 +25,26 @@ body, .page-info, .page-location {
   min-height: 100%;
 
 }
-
-body {
+.page-background {
   background-image: url("../img_3044.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 1;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-color: black;
+  min-height: 100%;
 }
 
 .page-main {
-  min-height: 100%;
 }
 
 .page-info {
@@ -215,7 +230,7 @@ h3 {
 }
 
 @media only screen and (max-device-width: 1024px) {
-    body, .page-main, .page-info, .page-location {
+    .page-main, .page-info, .page-location {
         background-attachment: scroll;
     }
 }
