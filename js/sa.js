@@ -91,7 +91,7 @@ var images = ["img_3044.jpg","img_2983.jpg", "img_2965.jpg", "./img/flower.png",
 
 function setPhotoGrid() { 
 	for ( var idx in images ) {
-		var item = '<div class="photo-grid-item"><img class="lazyload" data-original="'+images[i]+'"></div>';
+		var item = '<div class="photo-grid-item"><img class="lazyload" data-original="'+images[idx]+'"></div>';
 		$('.photo-grid').append(item);
 	}
 	var $grid = $('.photo-grid').masonry( {
