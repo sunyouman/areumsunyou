@@ -229,7 +229,7 @@ h3 {
   color: #000;
 }
 
-.photo-grid-item {
+.photo-grid-item img {
 	display: block;
 	max-width:100%;
 }
