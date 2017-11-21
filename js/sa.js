@@ -94,6 +94,8 @@ function setPhotoGrid() {
 		var item = '<div class="photo-grid-item"><img class="lazyload" data-original="'+images[idx]+'"></div>';
 		$('.photo-grid').append(item);
 	}
+	$("img.lazyload").lazyload();
+
 	var $grid = $('.photo-grid').masonry( {
 		itemSelector: '.photo-grid-item',
 		columnWidth: '.col-sm-6 .col-md-4, .col-lg-4',
