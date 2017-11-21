@@ -232,6 +232,11 @@ h3 {
 .photo-grid-item img {
 	display: block;
 	max-width:100%;
+	width:100%;
+}
+
+.photo-grid-item {
+	padding: 5px;
 }
 
 @media only screen and (max-device-width: 1024px) {
