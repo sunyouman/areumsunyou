@@ -86,9 +86,9 @@ function setMap() {
   });
 }
 
-var images = ["img_3044.jpg","img_2983.jpg", "img_2965.jpg", "./img/flower.png", "./img/heart.png",
-	"img_3044.jpg","img_2983.jpg", "img_2965.jpg", "./img/flower.png", "./img/heart.png",
-	"img_3044.jpg","img_2983.jpg", "img_2965.jpg", "./img/flower.png", "./img/heart.png"]
+var images = ["img_3044.jpg","img_2983.jpg", "img_2965.jpg", 
+	"img_3044.jpg","img_2983.jpg", "img_2965.jpg", 
+	"img_3044.jpg","img_2983.jpg", "img_2965.jpg"]
 
 function setPhotoGrid() { 
 	for ( var idx in images ) {
