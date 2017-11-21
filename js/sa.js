@@ -95,10 +95,7 @@ function setPhotoGrid() {
 		var item = '<div class="photo-grid-item col-6 col-sm-6 col-md-4 col-lg-4"><img class="lazyload" src="'+images[idx]+'"></div>';
 		$('.photo-grid').append(item);
 	}
-	//let imgs = document.querySelectorAll('.lazyload');
-	//lazyload(imgs);
 
-	$('.photo-grid-item').animateCss('fadeIn', '100%');
 	$('.photo-grid-item').click(function(){
 		var object = this;
 		if ($(this).hasClass('photo-grid-item-big') === true) {
@@ -108,7 +105,7 @@ function setPhotoGrid() {
 			$(this).addClass('photo-grid-item-big');
 			$('.photo-grid').one('layoutComplete', function(e, item) {
 				$("html, body").animate({
-					scrollTop: $(object).offset().top - $(document).scrollTop()
+					scrollTop: $(document).scrollTop()
 				});
 			});
 		}
