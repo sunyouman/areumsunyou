@@ -36,7 +36,7 @@ $(document).ready(function()
   if (isMobile()) {
 	$('.page-background').css('height', window.screen.height + 'px');
   } else {
-	$('.page-background').css('height', '100%');
+	$('.page-background').css('min-height', '100%');
   }
   setAnimation();
   setMap();
