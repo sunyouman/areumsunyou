@@ -100,11 +100,17 @@ function setPhotoGrid() {
 
 	$('.photo-grid-item').animateCss('fadeIn', '100%');
 	$('.photo-grid-item').click(function(){
+		var object = this;
 		if ($(this).hasClass('photo-grid-item-big') === true) {
 			$(this).removeClass('photo-grid-item-big');
 		} else {
 			$('.photo-grid-item').removeClass('photo-grid-item-big');
 			$(this).addClass('photo-grid-item-big');
+			$('.photo-grid').one('layoutComplete', function(e, item) {
+				$("html, body").animate({
+					scrollTop: $(object).offset().top - $(document).scrollTop()
+				});
+			});
 		}
 		$('.photo-grid').masonry('layout');
 	});
