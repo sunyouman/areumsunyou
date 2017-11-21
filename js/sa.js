@@ -34,8 +34,6 @@ $(document).ready(function()
     $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
   }, 1000);
   if (isMobile()) {
-	  $('body, html').css('height','300px');
-	  $('body, html').css('min-height','300px');
     // $(window).scroll(function() {
     //   var x = $(window).scrollTop();
     //   $('.page-main').css('background-position-y', x + 'px');
