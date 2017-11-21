@@ -111,7 +111,7 @@ function setPhotoGrid() {
 		}
 		$('.photo-grid').one('layoutComplete', function(e, item) {
 			$("html, body").animate({
-				scrollTop: $(document).scrollTop() + (screen.height/2) - ($(this).height()/2)
+				scrollTop: $(object).offset().top + (screen.height/2) - ($(this).height()/2)
 			});
 		});
 		$('.photo-grid').masonry('layout');
