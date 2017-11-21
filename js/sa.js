@@ -105,8 +105,11 @@ function setPhotoGrid() {
 			$(this).addClass('photo-grid-item-big');
 		}
 		$('.photo-grid').one('layoutComplete', function(e, item) {
+			var offset = 0;
+			if (window.innerHeight > $(object).height())
+				offset = ($(object).height()/2) - (window.innerHeight/2)
 			$("html, body").animate({
-				scrollTop: $(object).offset().top + (window.innerHeight/2) - ($(object).height()/2)
+				scrollTop: $(object).offset().top + offset
 			});
 		});
 		$('.photo-grid').masonry('layout');
