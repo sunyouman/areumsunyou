@@ -28,12 +28,12 @@ function isMobile() {
 
 $(document).ready(function()
 {
+  $('body, html').css('height',screen.height + 'px');
+  $('body, html').css('min-height',screen.height + 'px');
   setTimeout(function() {
     $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
     $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
-    $('body, html').css('height',screen.height + 'px');
-    $('body, html').css('min-height',screen.height + 'px');
   }, 1000);
   if (isMobile()) {
     // $(window).scroll(function() {
