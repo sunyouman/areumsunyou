@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Allura');
 @import url('https://fonts.googleapis.com/earlyaccess/nanumpenscript.css');
-@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
 body, html {
   margin: 0;
@@ -227,6 +227,11 @@ h3 {
 
 .text-black {
   color: #000;
+}
+
+.photo-grid-item {
+	display: block;
+	max-width:100%;
 }
 
 @media only screen and (max-device-width: 1024px) {

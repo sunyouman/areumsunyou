@@ -84,3 +84,20 @@ function setMap() {
     }
   });
 }
+
+var images = ["img_3044.jpg","img_2983.jpg", "img_2965.jpg", "./img/flower.png", "./img/heart.png",
+	"img_3044.jpg","img_2983.jpg", "img_2965.jpg", "./img/flower.png", "./img/heart.png",
+	"img_3044.jpg","img_2983.jpg", "img_2965.jpg", "./img/flower.png", "./img/heart.png"]
+
+function setPhotoGrid() { 
+	for ( var idx in images ) {
+		var item = '<div class="photo-grid-item"><img class="lazyload" data-original="'+images[i]+'"></div>';
+		$('.photo-grid').append(item);
+	}
+	var $grid = $('.photo-grid').masonry( {
+		itemSelector: '.photo-grid-item',
+		columnWidth: '.col-sm-6 .col-md-4, .col-lg-4',
+		percentPosition: true
+	});
+	$grid.imagesLoaded().progress(() => {$grid.masonry('layout');});
+}
