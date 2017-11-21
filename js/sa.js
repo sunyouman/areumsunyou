@@ -105,7 +105,7 @@ function setPhotoGrid() {
 			$(this).addClass('photo-grid-item-big');
 			$('.photo-grid').one('layoutComplete', function(e, item) {
 				$("html, body").animate({
-					scrollTop: $(document).scrollTop()
+					scrollTop: $(object).offset().top
 				});
 			});
 		}
