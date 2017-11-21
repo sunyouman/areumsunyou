@@ -99,7 +99,7 @@ function setPhotoGrid() {
 	//lazyload(imgs);
 
 	$('.photo-grid-item').animateCss('fadeIn', '100%');
-	$('.photo-grid-item').click(() -> {
+	$('.photo-grid-item').click(function(){
 		$('.photo-grid-item').removeClass('photo-grid-item-big');
 		$(this).addClass('photo-grid-item-big');
 	});
