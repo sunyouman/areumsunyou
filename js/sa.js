@@ -100,20 +100,15 @@ function setPhotoGrid() {
 		var object = this;
 		if ($(this).hasClass('photo-grid-item-big') === true) {
 			$(this).removeClass('photo-grid-item-big');
-			$('.photo-grid').one('layoutComplete', function(e, item) {
-				$("html, body").animate({
-					scrollTop: $(object).offset().top + (screen.height/2) - ($(object).height()/2)
-				});
-			});
 		} else {
 			$('.photo-grid-item').removeClass('photo-grid-item-big');
 			$(this).addClass('photo-grid-item-big');
-			$('.photo-grid').one('layoutComplete', function(e, item) {
-				$("html, body").animate({
-					scrollTop: $(object).offset().top + (screen.height/2) - ($(object).height()/2)
-				});
-			});
 		}
+		$('.photo-grid').one('layoutComplete', function(e, item) {
+			$("html, body").animate({
+				scrollTop: $(object).offset().top + (window.innerHeight/2) - ($(object).height()/2)
+			});
+		});
 		$('.photo-grid').masonry('layout');
 	});
 	var $grid = $('.photo-grid').masonry( {
