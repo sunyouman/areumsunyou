@@ -35,8 +35,7 @@ body, html {
   z-index: -1;
   opacity: 1;
   background-attachment: scroll;
-  background-position-x: center;
-  background-position-y: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
