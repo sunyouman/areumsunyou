@@ -98,6 +98,11 @@ function setPhotoGrid() {
 	//let imgs = document.querySelectorAll('.lazyload');
 	//lazyload(imgs);
 
+	$('.photo-grid-item').animateCss('fadeIn', '100%');
+	$('.photo-grid-item').click(() -> {
+		$('.photo-grid-item').removeClass('photo-grid-item-big');
+		$(this).addClass('photo-grid-item-big');
+	});
 	var $grid = $('.photo-grid').masonry( {
 		itemSelector: '.photo-grid-item',
 		columnWidth: '.col-6, .col-sm-6 .col-md-4, .col-lg-4',

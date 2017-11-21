@@ -239,6 +239,10 @@ h3 {
 	padding: 5px;
 }
 
+.photo-grid-item-big {
+	max-width: 100%;
+}
+
 @media only screen and (max-device-width: 1024px) {
     .page-main, .page-info, .page-location {
         background-attachment: scroll;
