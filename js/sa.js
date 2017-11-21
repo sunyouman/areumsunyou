@@ -100,8 +100,13 @@ function setPhotoGrid() {
 
 	$('.photo-grid-item').animateCss('fadeIn', '100%');
 	$('.photo-grid-item').click(function(){
-		$('.photo-grid-item').removeClass('photo-grid-item-big');
-		$(this).addClass('photo-grid-item-big');
+		if ($(this).hasClass('photo-grid-item-big') === true) {
+			$(this).removeClass('photo-grid-item-big');
+		} else {
+			$('.photo-grid-item').removeClass('photo-grid-item-big');
+			$(this).addClass('photo-grid-item-big');
+		}
+		$('.photo-grid').masonry('layout');
 	});
 	var $grid = $('.photo-grid').masonry( {
 		itemSelector: '.photo-grid-item',
