@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Allura');
 @import url('https://fonts.googleapis.com/earlyaccess/nanumpenscript.css');
-@import url('https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css');
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 body, html {
   margin: 0;
   padding: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
+  font: 15px "Nanum Gothic", sans-serif;
   color: #777;
   height: 100vh;
   min-height: 100vh;
@@ -177,7 +177,7 @@ body, html {
 h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
+  font: 20px "Nanum Gothic", sans-serif;
   color: #111;
 }
 
