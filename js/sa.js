@@ -28,6 +28,10 @@ function isMobile() {
 
 $(document).ready(function()
 {
+  $.waitForImages.hasImgProperties = ['backgroundImage'];
+  $('.page-info, .page-background, .page-location, img').waitForImages(function() {
+	  alert('zzzzz');
+  });
   setTimeout(function() {
     $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
