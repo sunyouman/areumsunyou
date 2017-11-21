@@ -28,11 +28,6 @@ function isMobile() {
 
 $(document).ready(function()
 {
-  setTimeout(function() {
-    $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
-    $('.main-flower').animate({opacity: 0}, 2000, 'linear');
-    $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
-  }, 1000);
   if (isMobile()) {
 	$('.page-background').css('height', window.screen.height + 'px');
   } else {
@@ -40,11 +35,15 @@ $(document).ready(function()
   }
   setAnimation();
   setMap();
-  $.waitForImages.hasImgProperties = ['backgroundImage'];
-  $('.page-info, .page-background, .page-location, img').waitForImages(function() {
-	  alert('zzzzz');
-  });
 });
+
+window.onload = function() {
+  setTimeout(function() {
+    $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
+    $('.main-flower').animate({opacity: 0}, 2000, 'linear');
+    $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
+  }, 1000);
+}
 
 function setAnimation() {
   $('.invitation-img').animateCss('zoomIn', '100%');
