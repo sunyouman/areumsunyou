@@ -28,19 +28,15 @@ function isMobile() {
 
 $(document).ready(function()
 {
-  $('.page-background').css('height', window.screen.height + 'px');
   setTimeout(function() {
     $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
     $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
   }, 1000);
   if (isMobile()) {
-    // $(window).scroll(function() {
-    //   var x = $(window).scrollTop();
-    //   $('.page-main').css('background-position-y', x + 'px');
-    //   $('.page-info').css('background-position-y', (x-$('.page-info').offset().top) + 'px');
-    //   $('.page-location').css('background-position-y', (x-$('.page-location').offset().top) + 'px');
-    // });
+	$('.page-background').css('height', window.screen.height + 'px');
+  } else {
+	$('.page-background').css('height', '100%');
   }
   setAnimation();
   setMap();
