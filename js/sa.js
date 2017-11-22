@@ -135,7 +135,7 @@ function setPhotoGrid() {
 				}
 				$("html, body").animate({
 					scrollTop: max 
-				}, 800);
+				}, 400);
 			});
 		}
 
