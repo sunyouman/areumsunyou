@@ -109,35 +109,31 @@ function setPhotoGrid() {
 			$("html, body").animate({
 				scrollTop: prevOffset + offset
 			});
+			//$('.photo-grid').masonry( {
+			//	transitionDuration:0
+			//}
+
+
 		} else {
 			$('.photo-grid-item').removeClass('photo-grid-item-big');
 			$('.photo-grid-item').addClass('photo-grid-item-opacity');
 			$(this).addClass('photo-grid-item-big');
 			$(this).removeClass('photo-grid-item-opacity');
-			prevOffset = $(object).offset().top;
 			var i = $('.photo-grid .photo-grid-item').index(this);
 			var max = 0;
-			if (i == 0) {
-				max = $(this).offset().top;
-			} else {
-				$('.photo-grid-item:lt('+i+')').each(function() {
-					var offset = $(this).offset().top + $(this).height();
-					if (max < offset) max = offset;
-				});
-			}
+			if (i == 0) max = $(this).offset().top;
+			else {
+			$('.photo-grid-item:lt('+i+')').each(function() {
+				var offset = $(this).offset().top + $(this).height();
+				if (max < offset) max = offset;
+			});
 			$("html, body").animate({
 				scrollTop: max 
 			});
 		}
-		//$('.photo-grid').one('layoutComplete', function(e, item) {
-		//	var offset = 0;
-		//	if (window.innerHeight > $(object).height())
-		//		offset = ($(object).height()/2) - (window.innerHeight/2)
-		//	$("html, body").animate({
-		//		scrollTop: $(object).offset().top + offset
-		//	});
-		//});
-		$('.photo-grid').masonry('layout');
+
+		$grid.one('layoutComplete', () => {prevOffset = $(object).offset().top;});
+		$('.photo-grid').masonry('layoutItems', $('.photo-grid-item-big');
 	});
 	var $grid = $('.photo-grid').masonry( {
 		itemSelector: '.photo-grid-item',
