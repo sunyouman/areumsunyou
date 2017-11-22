@@ -107,7 +107,7 @@ function setPhotoGrid() {
 			if (window.innerHeight > $(object).height())
 				offset = ($(object).height()/2) - (window.innerHeight/2)
 			$("html, body").animate({
-				scrollTop: prevOffset + offset;
+				scrollTop: prevOffset + offset
 			});
 		} else {
 			$('.photo-grid-item').removeClass('photo-grid-item-big');
