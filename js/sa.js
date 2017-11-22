@@ -97,7 +97,7 @@ function setPhotoGrid() {
 	}
 
 	$('.photo-grid-item').click(function(){
-		var object = this;
+		var object = $(this).find('img');
 		if ($(this).hasClass('photo-grid-item-big') === true) {
 			$(this).removeClass('photo-grid-item-big');
 			$('.photo-grid-item').removeClass('photo-grid-item-opacity');
