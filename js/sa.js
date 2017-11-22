@@ -133,7 +133,7 @@ function setPhotoGrid() {
 		}
 
 		$grid.one('layoutComplete', () => {prevOffset = $(object).offset().top;});
-		$('.photo-grid').masonry('layoutItems', $('.photo-grid-item-big');
+		$('.photo-grid').masonry('layoutItems', $('.photo-grid-item-big'));
 	});
 	var $grid = $('.photo-grid').masonry( {
 		itemSelector: '.photo-grid-item',
