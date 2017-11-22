@@ -100,9 +100,12 @@ function setPhotoGrid() {
 		var object = this;
 		if ($(this).hasClass('photo-grid-item-big') === true) {
 			$(this).removeClass('photo-grid-item-big');
+			$('.photo-grid-item').removeClass('photo-grid-item-opacity');
 		} else {
 			$('.photo-grid-item').removeClass('photo-grid-item-big');
+			$('.photo-grid-item').addClass('photo-grid-item-opacity');
 			$(this).addClass('photo-grid-item-big');
+			$(this).removeClass('photo-grid-item-opacity');
 		}
 		$('.photo-grid').one('layoutComplete', function(e, item) {
 			var offset = 0;

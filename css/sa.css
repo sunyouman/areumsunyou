@@ -243,6 +243,9 @@ h3 {
 	max-width: 100%;
 }
 
+.photo-grid-item-opacity {
+	opacity: 0.5;
+}
 @media only screen and (max-device-width: 1024px) {
     .page-main, .page-info, .page-location {
         background-attachment: scroll;
