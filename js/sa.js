@@ -109,9 +109,9 @@ function setPhotoGrid() {
 			$("html, body").animate({
 				scrollTop: prevOffset + offset
 			});
-			//$('.photo-grid').masonry( {
-			//	transitionDuration:0
-			//}
+			$('.photo-grid').masonry( {
+				transitionDuration:0
+			});
 
 
 		} else {
@@ -128,6 +128,9 @@ function setPhotoGrid() {
 					if (max < offset) max = offset;
 				});
 			}
+			$('.photo-grid').masonry( {
+				transitionDuration:400
+			});
 			$("html, body").animate({
 				scrollTop: max 
 			});
