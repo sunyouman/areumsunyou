@@ -110,7 +110,7 @@ function setPhotoGrid() {
 				scrollTop: prevOffset + offset
 			});
 			$('.photo-grid').masonry( {
-				transitionDuration:0
+				transitionDuration:400
 			});
 
 
@@ -129,14 +129,16 @@ function setPhotoGrid() {
 				});
 			}
 			$('.photo-grid').masonry( {
-				transitionDuration:400
+				transitionDuration:0
 			});
-			$("html, body").animate({
-				scrollTop: max 
+			$grid.one('layoutComplete', () => {
+				prevOffset = $(object).offset().top;
+				$("html, body").animate({
+					scrollTop: max 
+				});
 			});
 		}
 
-		$grid.one('layoutComplete', () => {prevOffset = $(object).offset().top;});
 		$('.photo-grid').masonry('layout');
 	});
 	var $grid = $('.photo-grid').masonry( {
