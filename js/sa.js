@@ -45,6 +45,10 @@ function preventPinchZoom() {
 
 $(document).ready(function()
 {
+  Pace.once('hide', () => {
+	$('.page-loading').hide();
+	$('body').unbind('touchmove');
+  });
   preventPinchZoom();
   $('body').bind('touchmove', function(e){e.preventDefault()});
   if (isMobile()) {
@@ -56,10 +60,6 @@ $(document).ready(function()
   setMap();
 });
 
-Pace.once('hide', () => {
-  $('.page-loading').hide();
-  $('body').unbind('touchmove');
-});
 
 window.onload = function() {
   setTimeout(function() {
