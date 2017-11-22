@@ -108,9 +108,9 @@ function setPhotoGrid() {
 				offset = ($(object).height()/2) - (window.innerHeight/2)
 			$("html, body").animate({
 				scrollTop: prevOffset + offset
-			});
+			}, 800);
 			$('.photo-grid').masonry( {
-				transitionDuration:400
+				transitionDuration:800
 			});
 
 
@@ -135,7 +135,7 @@ function setPhotoGrid() {
 				}
 				$("html, body").animate({
 					scrollTop: max 
-				});
+				}, 800);
 			});
 		}
 
@@ -144,7 +144,8 @@ function setPhotoGrid() {
 	var $grid = $('.photo-grid').masonry( {
 		itemSelector: '.photo-grid-item',
 		columnWidth: '.col-6, .col-sm-6 .col-md-4, .col-lg-4',
-		percentPosition: true
+		percentPosition: true,
+		transitionDuration:800
 	});
 	$grid.imagesLoaded().progress(() => {$grid.masonry('layout');});
 }
