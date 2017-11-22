@@ -46,6 +46,7 @@ function preventPinchZoom() {
 $(document).ready(function()
 {
   preventPinchZoom();
+  $('body').bind('touchmove', function(e){e.preventDefault()});
   if (isMobile()) {
 	$('.page-background').css('height', window.screen.height + 'px');
   } else {
@@ -57,6 +58,7 @@ $(document).ready(function()
 
 window.onload = function() {
   $('.page-loading').hide();
+  $('body').unbind('touchmove');
   setTimeout(function() {
     $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
