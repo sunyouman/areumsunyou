@@ -54,17 +54,6 @@ body, html {
   opacity: 1;
   min-height: 100%;
   width: 100%;
-  display: table;
-}
-
-.progress-wrapper {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.progress {
-	width: 30%;
-	margin: 0 auto;
 }
 
 .main-background {
