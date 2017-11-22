@@ -44,6 +44,21 @@ body, html {
   /*background-color: black;*/
 }
 
+.page-loading {
+  background-color:#061533;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  opacity: 1;
+  min-height: 100%;
+}
+
+.main-background {
+	width:100%;
+	background-color:#061533;
+}
 .page-main {
 }
 
