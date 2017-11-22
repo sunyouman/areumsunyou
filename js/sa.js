@@ -119,20 +119,20 @@ function setPhotoGrid() {
 			$('.photo-grid-item').addClass('photo-grid-item-opacity');
 			$(this).addClass('photo-grid-item-big');
 			$(this).removeClass('photo-grid-item-opacity');
-			var i = $('.photo-grid .photo-grid-item').index(this);
-			var max = 0;
-			if (i == 0) max = $(this).offset().top;
-			else {
-				$('.photo-grid-item:lt('+i+')').each(function() {
-					var offset = $(this).offset().top + $(this).height();
-					if (max < offset) max = offset;
-				});
-			}
 			$('.photo-grid').masonry( {
 				transitionDuration:0
 			});
 			$grid.one('layoutComplete', () => {
 				prevOffset = $(object).offset().top;
+				var i = $('.photo-grid .photo-grid-item').index(this);
+				var max = 0;
+				if (i == 0) max = $(this).offset().top;
+				else {
+					$('.photo-grid-item:lt('+i+')').each(function() {
+						var offset = $(this).offset().top + $(this).height();
+						if (max < offset) max = offset;
+					});
+				}
 				$("html, body").animate({
 					scrollTop: max 
 				});
