@@ -90,6 +90,8 @@ var images = ["img_3044.jpg","img_2983.jpg", "img_2965.jpg",
 	"img_3044.jpg","img_2983.jpg", "img_2965.jpg", 
 	"img_3044.jpg","img_2983.jpg", "img_2965.jpg"]
 
+var prevOffset = 0;
+
 function setPhotoGrid() { 
 	for ( var idx in images ) {
 		var item = '<div class="photo-grid-item col-6 col-sm-6 col-md-4 col-lg-4"><img class="lazyload" src="'+images[idx]+'"></div>';
@@ -97,24 +99,40 @@ function setPhotoGrid() {
 	}
 
 	$('.photo-grid-item').click(function(){
-		var object = $(this).find('img');
+		var object = $(this);
 		if ($(this).hasClass('photo-grid-item-big') === true) {
 			$(this).removeClass('photo-grid-item-big');
 			$('.photo-grid-item').removeClass('photo-grid-item-opacity');
+			var offset = 0;
+			if (window.innerHeight > $(object).height())
+				offset = ($(object).height()/2) - (window.innerHeight/2)
+			$("html, body").animate({
+				scrollTop: prevOffset + offset;
+			});
 		} else {
 			$('.photo-grid-item').removeClass('photo-grid-item-big');
 			$('.photo-grid-item').addClass('photo-grid-item-opacity');
 			$(this).addClass('photo-grid-item-big');
 			$(this).removeClass('photo-grid-item-opacity');
-		}
-		$('.photo-grid').one('layoutComplete', function(e, item) {
-			var offset = 0;
-			if (window.innerHeight > $(object).height())
-				offset = ($(object).height()/2) - (window.innerHeight/2)
-			$("html, body").animate({
-				scrollTop: $(object).offset().top + offset
+			prevOffset = $(object).offset().top;
+			var i = $('.photo-grid .photo-grid-item').index(this);
+			var max = 0;
+			$('.photo-grid-item:lt('+i+')').each(function() {
+				var offset = $(this).offset().top + $(this).height();
+				if (max < offset) max = offset;
 			});
-		});
+			$("html, body").animate({
+				scrollTop: max 
+			});
+		}
+		//$('.photo-grid').one('layoutComplete', function(e, item) {
+		//	var offset = 0;
+		//	if (window.innerHeight > $(object).height())
+		//		offset = ($(object).height()/2) - (window.innerHeight/2)
+		//	$("html, body").animate({
+		//		scrollTop: $(object).offset().top + offset
+		//	});
+		//});
 		$('.photo-grid').masonry('layout');
 	});
 	var $grid = $('.photo-grid').masonry( {
