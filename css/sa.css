@@ -207,7 +207,7 @@ h3 {
 
 .page-photo {
   min-height: 600px;
-  background-color: #444;
+  background-color: #bbb;
   color: red;
 
 }
@@ -244,7 +244,7 @@ h3 {
 }
 
 .photo-grid-item-opacity {
-	opacity: 0.5;
+	opacity: 0.3;
 }
 @media only screen and (max-device-width: 1024px) {
     .page-main, .page-info, .page-location {
