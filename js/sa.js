@@ -117,10 +117,14 @@ function setPhotoGrid() {
 			prevOffset = $(object).offset().top;
 			var i = $('.photo-grid .photo-grid-item').index(this);
 			var max = 0;
-			$('.photo-grid-item:lt('+i+')').each(function() {
-				var offset = $(this).offset().top + $(this).height();
-				if (max < offset) max = offset;
-			});
+			if (i == 0) {
+				max = $(this).offset().top;
+			} else {
+				$('.photo-grid-item:lt('+i+')').each(function() {
+					var offset = $(this).offset().top + $(this).height();
+					if (max < offset) max = offset;
+				});
+			}
 			$("html, body").animate({
 				scrollTop: max 
 			});
