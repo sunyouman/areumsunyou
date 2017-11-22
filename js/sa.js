@@ -56,9 +56,12 @@ $(document).ready(function()
   setMap();
 });
 
-window.onload = function() {
+Pace.once('hide', () => {
   $('.page-loading').hide();
   $('body').unbind('touchmove');
+});
+
+window.onload = function() {
   setTimeout(function() {
     $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
