@@ -123,10 +123,11 @@ function setPhotoGrid() {
 			var max = 0;
 			if (i == 0) max = $(this).offset().top;
 			else {
-			$('.photo-grid-item:lt('+i+')').each(function() {
-				var offset = $(this).offset().top + $(this).height();
-				if (max < offset) max = offset;
-			});
+				$('.photo-grid-item:lt('+i+')').each(function() {
+					var offset = $(this).offset().top + $(this).height();
+					if (max < offset) max = offset;
+				});
+			}
 			$("html, body").animate({
 				scrollTop: max 
 			});
