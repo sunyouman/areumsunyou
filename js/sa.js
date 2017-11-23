@@ -65,12 +65,10 @@ $(document).ready(function()
       $('#'+text).append(contents[text]);
 
     setMap();
+    setPhotoGrid();
   };
   newScript.src = './js/'+script+'.js';
   headTag.appendChild(newScript);
-
-
-
 
   preventPinchZoom();
 
@@ -82,8 +80,6 @@ $(document).ready(function()
   }
 
   setAnimation();
-
-  setPhotoGrid();
 });
 
 
@@ -138,17 +134,13 @@ function setMap() {
   });
 }
 
-var images = ["img_3044","img_2983", "img_2965",
-	"img_3044","img_2983", "img_2965",
-	"img_3044","img_2983", "img_2965"]
-
 var prevOffset = 0;
 
 function setPhotoGrid() {
 	for ( var idx in images ) {
 		var item = '<div class="photo-grid-item col-6 col-sm-6 col-md-4 col-lg-4">'
       +'<div class="photo-menu-wrapper">'
-      +'<img class="lazyload" data-src="./photo/'+images[idx]+'_small.jpg"></div></div>';
+      +'<img class="lazyload" data-src="./photo/'+images[idx]['small']+'"  data-origin-src="./photo/'+images[idx]['large']+'"></div></div>';
     $('.photo-grid').append(item);
 	}
 
@@ -187,18 +179,22 @@ function photoClick(){
       transitionDuration:0
     });
 
-    var menu = ["<div class='photo-menu'>",
-      '<div class="photo-menu-icon"><span class="oi oi-zoom-in" aria-hidden="true"></span></div>',
-      "</div>"].join('');
-    $(object).find('.photo-menu-wrapper').prepend(menu);
-    var navigation = ["<div class='photo-navigation'>",
-    '<button class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>',
-    '<button class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>',
-      "</div>"].join('');
-    $(object).append(navigation);
+    var menu = [
+      "<div class='photo-menu'>",
+        '<div class="photo-menu-icon">',
+        '<span class="oi oi-zoom-in" aria-hidden="true"></span></div>',
+      "</div>"];
+    $(object).find('.photo-menu-wrapper').prepend(menu.join(''));
+
+    var navigation = [
+      "<div class='photo-navigation'>",
+        '<button class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>',
+        '<button class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>',
+      "</div>"];
+    $(object).append(navigation.join(''));
 
     $('.photo-menu').click(function(e) {
-      window.open($('.photo-grid-item-big img').attr('data-src'), '_blank');
+      window.open($('.photo-grid-item-big img').attr('data-origin-src'), '_blank');
       e.stopPropagation();
     });
 

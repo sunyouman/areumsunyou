@@ -1,5 +1,7 @@
 
 var contents = {
+  "title":"윤아름♥김선유 우리 결혼합니다♡",
+
   "main-calendar":"1.13",
   "name-marriage": "The marriage of",
   "name-man": "김선유",
@@ -41,3 +43,42 @@ var lat = 37.349499;
 var long = 127.928254;
 
 var overlay_location = "원주웨딩타운";
+
+var images = [
+  {
+    "small":"img_3044_small.jpg",
+    "large":"img_3044.jpg"
+  },
+  {
+    "small":"img_2983_small.jpg",
+    "large":"img_2983.jpg"
+  },
+  {
+    "small":"img_2965_small.jpg",
+    "large":"img_2965.jpg"
+  },
+  {
+    "small":"img_3044_small.jpg",
+    "large":"img_3044.jpg"
+  },
+  {
+    "small":"img_2983_small.jpg",
+    "large":"img_2983.jpg"
+  },
+  {
+    "small":"img_2965_small.jpg",
+    "large":"img_2965.jpg"
+  },
+  {
+    "small":"img_3044_small.jpg",
+    "large":"img_3044.jpg"
+  },
+  {
+    "small":"img_2983_small.jpg",
+    "large":"img_2983.jpg"
+  },
+  {
+    "small":"img_2965_small.jpg",
+    "large":"img_2965.jpg"
+  }
+]
