@@ -73,7 +73,7 @@ window.onload = function() {
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
     $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
   }, 1000);
-  $('.lazyload').lazyload();
+  //$('.lazyload').lazyload();
 }
 
 function setAnimation() {
@@ -177,7 +177,7 @@ function photoClick(){
     $(object).append(navigation);
 
     $('.photo-menu').click(function(e) {
-      window.open($('.photo-grid-item-big img').attr('src'), '_blank');
+      window.open($('.photo-grid-item-big img').attr('data-src'), '_blank');
       //window.location.href = $('.photo-grid-item-big img').attr('src');
       e.stopPropagation();
     });
