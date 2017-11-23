@@ -54,15 +54,35 @@ $(document).ready(function()
     $('.page-loading').hide();
     $('body').unbind('touchmove');
   });
+
+  var script = window.location.search.substring(1);
+
+  var headTag = document.getElementsByTagName("head")[0];
+  var newScript = document.createElement('script');
+  newScript.type = 'text/javascript';
+  newScript.onload = function() {
+    for (var text in contents)
+      $('#'+text).append(contents[text]);
+
+    setMap();
+  };
+  newScript.src = './js/'+script+'.js';
+  headTag.appendChild(newScript);
+
+
+
+
   preventPinchZoom();
+
   $('body').bind('touchmove', function(e){e.preventDefault()});
   if (isMobile()) {
-	$('.page-background').css('height', window.screen.height + 'px');
+	   $('.page-background').css('height', window.screen.height + 'px');
   } else {
-	$('.page-background').css('min-height', '100%');
+	   $('.page-background').css('min-height', '100%');
   }
+
   setAnimation();
-  setMap();
+
   setPhotoGrid();
 });
 
@@ -91,7 +111,7 @@ function setAnimation() {
 
 function setMap() {
   var mapOptions = {
-      center: new naver.maps.LatLng(37.4871272,127.0461243),
+      center: new naver.maps.LatLng(lat,long),
       zoom: 12,
       draggable: false,
       pinchZoom: false,
@@ -104,11 +124,11 @@ function setMap() {
 
   var map = new naver.maps.Map('map', mapOptions);
   var marker = new naver.maps.Marker({
-    position: new naver.maps.LatLng(37.4871272,127.0461243),
+    position: new naver.maps.LatLng(lat,long),
     map: map,
     animation: naver.maps.Animation.BOUNCE,
     icon: {
-        content: '<div class="text-center" style="color:red;"><b style="background:white;padding:2px">마켓오 도곡점</b><br><img src="./img/heart.png" class="main-img"></div>',
+        content: '<div class="text-center" style="color:red;"><b style="background:white;padding:2px">'+overlay_location+'</b><br><img src="./img/heart.png" class="main-img"></div>',
         size: new naver.maps.Size(50, 82),
         origin: new naver.maps.Point(0, 0),
         anchor: new naver.maps.Point(50, 56)

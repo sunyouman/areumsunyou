@@ -191,6 +191,14 @@ body, html {
   margin-top: 10px;
 }
 
+#photo-title {
+  font-size: 20px;
+  line-height: 2.3em;
+  color:rgba(0, 0, 0, 0.85);
+  font-weight: bold;
+  padding-top: 40px;
+}
+
 h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
