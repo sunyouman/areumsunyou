@@ -63,6 +63,7 @@ $(document).ready(function()
   }
   setAnimation();
   setMap();
+  setPhotoGrid();
 });
 
 
@@ -72,7 +73,7 @@ window.onload = function() {
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
     $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
   }, 1000);
-  setPhotoGrid();
+  $('.lazyload').lazyload();
 }
 
 function setAnimation() {
@@ -115,9 +116,9 @@ function setMap() {
   });
 }
 
-var images = ["img_3044.jpg","img_2983.jpg", "img_2965.jpg",
-	"img_3044.jpg","img_2983.jpg", "img_2965.jpg",
-	"img_3044.jpg","img_2983.jpg", "img_2965.jpg"]
+var images = ["img_3044","img_2983", "img_2965",
+	"img_3044","img_2983", "img_2965",
+	"img_3044","img_2983", "img_2965"]
 
 var prevOffset = 0;
 
@@ -125,7 +126,7 @@ function setPhotoGrid() {
 	for ( var idx in images ) {
 		var item = '<div class="photo-grid-item col-6 col-sm-6 col-md-4 col-lg-4">'
       +'<div class="photo-menu-wrapper">'
-      +'<img class="lazyload" src="'+images[idx]+'"></div></div>';
+      +'<img class="lazyload" src="./photo/'+images[idx]+'_small.jpg" data-src="./photo/'+images[idx]+'.jpg"></div></div>';
     $('.photo-grid').append(item);
 	}
 
@@ -136,7 +137,7 @@ function setPhotoGrid() {
 		percentPosition: true,
 		transitionDuration:800
 	});
-	$grid.imagesLoaded().progress(() => {$grid.masonry('layout');});
+	$grid.imagesLoaded().done(() => {$grid.masonry('layout');});
 }
 
 function photoClick(){
