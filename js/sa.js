@@ -84,6 +84,7 @@ $(document).ready(function()
 
 
 window.onload = function() {
+
   setTimeout(function() {
     $('.main-background').animate({backgroundColor:'rgba(0,0,0,0)'}, 2000, 'linear');
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
@@ -92,6 +93,10 @@ window.onload = function() {
   $('.lazyload').lazyload().on('load',function(){
     $('.photo-grid').masonry('layout');
   });
+}
+
+window.onbeforeunload = function() {
+  $(window).scrollTop(0);
 }
 
 function setAnimation() {
