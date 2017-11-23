@@ -288,10 +288,15 @@ h3 {
   align-items: center;
 }
 
+.photo-menu-wrapper {
+  width: 100%;
+}
+
 .photo-menu {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   height: 50px;
+  width:50px;
   color: white;
   right: 0%;
   z-index: 1000;
