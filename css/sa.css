@@ -50,7 +50,7 @@ body, html {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1999;
   opacity: 1;
   min-height: 100%;
   width: 100%;
@@ -280,7 +280,6 @@ h3 {
   align-items: center;
 }
 
-
 .photo-menu {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -311,7 +310,6 @@ h3 {
         background-attachment: scroll;
     }
 }
-
 
 button.arrow  {
   -webkit-appearance: none;

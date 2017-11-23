@@ -152,7 +152,7 @@ function photoClick(){
     $("html, body").animate({
       scrollTop: prevOffset + offset
     }, 800);
-    $(object).find('.photo-menu-wrapper').animation('flipInY');
+    //$(object).find('.photo-menu-wrapper').animation('flipInY');
     $('.photo-grid').masonry( {
       transitionDuration:800
     });
@@ -215,8 +215,8 @@ function photoClick(){
       var animationName = 'zoomIn';
       var scrollSpeed = 400;
       switch (ev) {
-        case 'left': animationName = 'slideInRight'; scrollSpeed = 0; break;
-        case 'right': animationName = 'slideInLeft'; scrollSpeed = 0; break;
+        case 'left': animationName = 'slideInLeft'; scrollSpeed = 0; break;
+        case 'right': animationName = 'slideInRight'; scrollSpeed = 0; break;
       }
       $(object).find('.photo-menu-wrapper').animation(animationName);
       $("html, body").animate({scrollTop: max}, scrollSpeed);
