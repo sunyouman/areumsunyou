@@ -259,18 +259,108 @@ h3 {
 
 .photo-grid-item-big {
 	max-width: 100%;
-	height: 98vh;
-	max-height: 98vh;
+	height: 100vh;
+	max-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  padding:0px;
 }
 
 .photo-grid-item-opacity {
 	opacity: 0.15;
 }
+
+.photo-navigation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.photo-menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 50px;
+  color: white;
+  right: 0%;
+  z-index: 1000;
+}
+.photo-menu-icon {
+  width:50px;
+  height: 50px;
+  font-weight: normal;
+  font-size: 20pt;
+  text-align: center;
+  float:right;
+}
+
+.photo-menu-icon span {
+  vertical-align: middle;
+}
+
+.photo-menu-icon span.oi-zoom-in {
+  top: 7px;
+}
+
 @media only screen and (max-device-width: 1024px) {
     .page-main, .page-info, .page-location {
         background-attachment: scroll;
     }
+}
+
+
+button.arrow  {
+  -webkit-appearance: none;
+  background: rgba(0, 0, 0, 0.3);
+  border: 0;
+  outline:0;
+}
+
+svg {
+  padding: 5px;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  width: 70px;
+  height: 90px;
+}
+
+.left {
+  left: 0%;
+}
+
+.right {
+  right: 0%;
+}
+
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 3;
+}
+
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
 }
