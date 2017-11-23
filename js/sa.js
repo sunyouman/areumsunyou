@@ -93,7 +93,9 @@ window.onload = function() {
     $('.main-flower').animate({opacity: 0}, 2000, 'linear');
     $('.main-calendar, .main-name').animate({color:'rgba(0,0,0,1)'}, 2000, 'linear');
   }, 1000);
-  //$('.lazyload').lazyload();
+  $('.lazyload').lazyload().on('load',function(){
+    $('.photo-grid').masonry('layout');
+  });
 }
 
 function setAnimation() {
@@ -146,7 +148,7 @@ function setPhotoGrid() {
 	for ( var idx in images ) {
 		var item = '<div class="photo-grid-item col-6 col-sm-6 col-md-4 col-lg-4">'
       +'<div class="photo-menu-wrapper">'
-      +'<img class="lazyload" src="./photo/'+images[idx]+'_small.jpg" data-src="./photo/'+images[idx]+'.jpg"></div></div>';
+      +'<img class="lazyload" data-src="./photo/'+images[idx]+'_small.jpg"></div></div>';
     $('.photo-grid').append(item);
 	}
 
@@ -157,7 +159,6 @@ function setPhotoGrid() {
 		percentPosition: true,
 		transitionDuration:800
 	});
-	$grid.imagesLoaded().done(() => {$grid.masonry('layout');});
 }
 
 function photoClick(){
@@ -173,7 +174,7 @@ function photoClick(){
     $("html, body").animate({
       scrollTop: prevOffset + offset
     }, 800);
-    //$(object).find('.photo-menu-wrapper').animation('flipInY');
+
     $('.photo-grid').masonry( {
       transitionDuration:800
     });
@@ -198,7 +199,6 @@ function photoClick(){
 
     $('.photo-menu').click(function(e) {
       window.open($('.photo-grid-item-big img').attr('data-src'), '_blank');
-      //window.location.href = $('.photo-grid-item-big img').attr('src');
       e.stopPropagation();
     });
 
