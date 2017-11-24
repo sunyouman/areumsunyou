@@ -64,7 +64,7 @@ var images = [
     "large":"3488_1.jpg"
   },
   {
-    "small":"3805-1.jpg",
+    "small":"3805-1_small.jpg",
     "large":"3805-1.jpg"
   },
   {
@@ -80,7 +80,7 @@ var images = [
     "large":"1976.jpg"
   },
   {
-    "small":"2505-1.jpg",
+    "small":"2505-1_small.jpg",
     "large":"2505-1.jpg"
   },
   {
