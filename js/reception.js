@@ -46,39 +46,51 @@ var overlay_location = "원주웨딩타운";
 
 var images = [
   {
-    "small":"img_3044_small.jpg",
-    "large":"img_3044.jpg"
+    "small":"main_small.jpg",
+    "large":"main.jpg"
   },
   {
-    "small":"img_2983_small.jpg",
-    "large":"img_2983.jpg"
+    "small":"photo4_small.jpg",
+    "large":"photo4.jpg"
   },
   {
-    "small":"img_2965_small.jpg",
-    "large":"img_2965.jpg"
+    "small":"location_small.jpg",
+    "large":"location.jpg"
   },
   {
-    "small":"img_3044_small.jpg",
-    "large":"img_3044.jpg"
+    "small":"3175_1_small.jpg",
+    "large":"3175_1.jpg"
   },
   {
-    "small":"img_2983_small.jpg",
-    "large":"img_2983.jpg"
+    "small":"3488_1_small.jpg",
+    "large":"3488_1.jpg"
   },
   {
-    "small":"img_2965_small.jpg",
-    "large":"img_2965.jpg"
+    "small":"3805-1.jpg",
+    "large":"3805-1.jpg"
   },
   {
-    "small":"img_3044_small.jpg",
-    "large":"img_3044.jpg"
+    "small":"4148_small.jpg",
+    "large":"4148.jpg"
   },
   {
-    "small":"img_2983_small.jpg",
-    "large":"img_2983.jpg"
+    "small":"info_small.jpg",
+    "large":"info.jpg"
   },
   {
-    "small":"img_2965_small.jpg",
-    "large":"img_2965.jpg"
+    "small":"1976_small.jpg",
+    "large":"1976.jpg"
+  },
+  {
+    "small":"2505-1.jpg",
+    "large":"2505-1.jpg"
+  },
+  {
+    "small":"2261_small.jpg",
+    "large":"2261.jpg"
+  },
+  {
+    "small":"2368_small.jpg",
+    "large":"2368.jpg"
   }
 ]
