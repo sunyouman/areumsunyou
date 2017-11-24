@@ -57,6 +57,9 @@ $(document).ready(function()
 
   var script = window.location.search.substring(1);
 
+  if (script === "")
+	script = "wedding";
+
   var headTag = document.getElementsByTagName("head")[0];
   var newScript = document.createElement('script');
   newScript.type = 'text/javascript';
@@ -196,6 +199,11 @@ function photoClick(){
         '<button class="arrow left"><svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/></svg></button>',
         '<button class="arrow right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve"><polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/></svg></button>',
       "</div>"];
+	var len = $itemList.length;
+	var itemIndex = $itemList.index($('.photo-grid-item-big'));
+
+	if (itemIndex == 0) navigation.splice(1, 1);
+	if (itemIndex == len-1) navigation.splice(2, 1);
     $(object).append(navigation.join(''));
 
     $('.photo-menu').click(function(e) {
