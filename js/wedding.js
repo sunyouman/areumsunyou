@@ -76,8 +76,8 @@ var images = [
     "large":"info.jpg"
   },
   {
-    "small":"1976_small.jpg",
-    "large":"1976.jpg"
+    "small":"2012_small.jpg",
+    "large":"2012.jpg"
   },
   {
     "small":"2505-1_small.jpg",
