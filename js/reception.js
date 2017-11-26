@@ -92,5 +92,9 @@ var images = [
   {
     "small":"2368_small.jpg",
     "large":"2368.jpg"
+  },
+  {
+    "small":"3046_small.jpg",
+    "large":"3046.jpg"
   }
 ]
