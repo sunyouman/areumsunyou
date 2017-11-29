@@ -34,7 +34,9 @@ var contents = {
   "location-location-title":"주소",
   "location-tel-title":"Tel.",
   "location-subway-title":"지하철",
-  "location-bus-title":"버스"
+  "location-bus-title":"버스",
+
+  "main-last":"행복하게 잘 살겠습니다."
 }
 
 var lat = 37.4871272;
@@ -88,11 +90,15 @@ var images = [
     "large":"2261.jpg"
   },
   {
-    "small":"2368_small.jpg",
-    "large":"2368.jpg"
+    "small":"4948.jpg",
+    "large":"4948.jpg"
   },
   {
     "small":"3046_small.jpg",
     "large":"3046.jpg"
+  },
+  {
+    "small":"2368_small.jpg",
+    "large":"2368.jpg"
   }
 ]

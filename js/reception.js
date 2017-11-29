@@ -1,6 +1,6 @@
 
 var contents = {
-  "title":"윤아름♥김선유 우리 결혼합니다♡",
+  "title":"[피로연] 윤아름♥김선유 우리 결혼합니다♡",
 
   "main-calendar":"1.13",
   "name-marriage": "The marriage of",
@@ -20,7 +20,7 @@ var contents = {
   "name-daughter":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아 름",
 
   "info-title":"피로연 안내",
-  "info-text":"가까운 친지 여러분들의<br>축복과 격려를 더 잘 듣기 위해<br>저희의 결혼식은<br>작은 결혼식으로 진행됩니다.<br>특별한 날인만큼<br>더 세심히 준비하려고 노력하였으니<br>자리를 빛내주시기 바랍니다.",
+  "info-text":"축복해 주시려는 분들의<br>감사한 마음 보답하기 위해<br>피로연 자리를 마련하였습니다.<br>특별한 날인만큼<br>더 세심히 준비하려고 노력하였으니<br>자리를 빛내주시기 바랍니다.",
   "info-location":"원주웨딩타운 1층",
   "info-calendar":"1월 13일 토요일",
   "info-time":"오후 6시",
@@ -36,7 +36,9 @@ var contents = {
   "location-location-title":"주소",
   "location-tel-title":"Tel.",
   "location-subway-title":"버스",
-  "location-bus-title":""
+  "location-bus-title":"",
+
+  "main-last":"행복하게 잘 살겠습니다."
 }
 
 var lat = 37.349499;
@@ -90,11 +92,15 @@ var images = [
     "large":"2261.jpg"
   },
   {
-    "small":"2368_small.jpg",
-    "large":"2368.jpg"
+    "small":"4948.jpg",
+    "large":"4948.jpg"
   },
   {
     "small":"3046_small.jpg",
     "large":"3046.jpg"
+  },
+  {
+    "small":"2368_small.jpg",
+    "large":"2368.jpg"
   }
 ]
