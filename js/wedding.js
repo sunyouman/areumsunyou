@@ -46,59 +46,55 @@ var overlay_location = "마켓오 도곡점";
 
 var images = [
   {
-    "small":"main_small.jpg",
-    "large":"main.jpg"
+    "small":"https://i.imgur.com/n2lpmpYh.jpg",
+    "large":"https://i.imgur.com/n2lpmpY.jpg"
   },
   {
-    "small":"photo4_small.jpg",
-    "large":"photo4.jpg"
+    "small":"https://i.imgur.com/d0NDY2zh.jpg",
+    "large":"https://i.imgur.com/d0NDY2z.jpg"
   },
   {
-    "small":"location_small.jpg",
-    "large":"location.jpg"
+    "small":"https://i.imgur.com/UTbJQKnh.jpg",
+    "large":"https://i.imgur.com/UTbJQKn.jpg"
   },
   {
-    "small":"3175_1_small.jpg",
-    "large":"3175_1.jpg"
+    "small":"https://i.imgur.com/w4wfRTSh.jpg",
+    "large":"https://i.imgur.com/w4wfRTS.jpg"
   },
   {
-    "small":"3488_1_small.jpg",
-    "large":"3488_1.jpg"
+    "small":"https://i.imgur.com/e6svNATh.jpg",
+    "large":"https://i.imgur.com/e6svNAT.jpg"
   },
   {
-    "small":"3805-1_small.jpg",
-    "large":"3805-1.jpg"
+    "small":"https://i.imgur.com/hlHiaGOh.jpg",
+    "large":"https://i.imgur.com/hlHiaGO.jpg"
   },
   {
-    "small":"4148_small.jpg",
-    "large":"4148.jpg"
+    "small":"https://i.imgur.com/PmAacg2h.jpg",
+    "large":"https://i.imgur.com/PmAacg2.jpg"
   },
   {
-    "small":"info_small.jpg",
-    "large":"info.jpg"
+    "small":"https://i.imgur.com/sjEnp5ah.jpg",
+    "large":"https://i.imgur.com/sjEnp5a.jpg"
   },
   {
-    "small":"2012_small.jpg",
-    "large":"2012.jpg"
+    "small":"https://i.imgur.com/3Ayjypsh.jpg",
+    "large":"https://i.imgur.com/3Ayjyps.jpg"
   },
   {
-    "small":"2505-1_small.jpg",
-    "large":"2505-1.jpg"
+    "small":"https://i.imgur.com/uOKm45wh.jpg",
+    "large":"https://i.imgur.com/uOKm45w.jpg"
   },
   {
-    "small":"2261_small.jpg",
-    "large":"2261.jpg"
+    "small":"https://i.imgur.com/RYsSw83h.jpg",
+    "large":"https://i.imgur.com/RYsSw83.jpg"
   },
   {
-    "small":"4948.jpg",
-    "large":"4948.jpg"
+    "small":"https://i.imgur.com/56ynsiLh.jpg",
+    "large":"https://i.imgur.com/56ynsiL.jpg"
   },
   {
-    "small":"3046_small.jpg",
-    "large":"3046.jpg"
-  },
-  {
-    "small":"2368_small.jpg",
-    "large":"2368.jpg"
+    "small":"https://i.imgur.com/0wuPGgsh.jpg",
+    "large":"https://i.imgur.com/0wuPGgs.jpg"
   }
 ]

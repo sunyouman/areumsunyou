@@ -153,7 +153,7 @@ function setPhotoGrid() {
 	for ( var idx in images ) {
 		var item = '<div class="photo-grid-item col-6 col-sm-6 col-md-4 col-lg-4">'
       +'<div class="photo-menu-wrapper">'
-      +'<img class="lazyload" data-src="./photo/'+images[idx]['small']+'"  data-origin-src="./photo/'+images[idx]['large']+'"></div></div>';
+      +'<img class="lazyload" data-src="'+images[idx]['small']+'"  data-origin-src="'+images[idx]['large']+'"></div></div>';
     $('.photo-grid').append(item);
 	}
 
@@ -213,7 +213,9 @@ function photoClick(){
     $(object).append(navigation.join(''));
 
     $('.photo-menu').click(function(e) {
-      window.open($('.photo-grid-item-big img').attr('data-origin-src'), '_blank');
+      var src = $('.photo-grid-item-big img').attr('data-origin-src');
+      src = encodeURIComponent(src);
+      window.open("./photo_view.html?src="+src, '_blank');
       e.stopPropagation();
     });
 
