@@ -139,7 +139,7 @@ function setMap() {
     map: map,
     animation: naver.maps.Animation.BOUNCE,
     icon: {
-        content: '<div class="text-center" style="color:red;"><b style="background:white;padding:2px">'+overlay_location+'</b><br><img src="./img/heart.png" class="main-img"></div>',
+        content: '<div class="text-center" style="color:red;"><b style="background:white;padding:2px">'+overlay_location+'</b><br><img src="https://i.imgur.com/4ruXDon.png" class="main-img"></div>',
         size: new naver.maps.Size(50, 82),
         origin: new naver.maps.Point(0, 0),
         anchor: new naver.maps.Point(50, 56)
