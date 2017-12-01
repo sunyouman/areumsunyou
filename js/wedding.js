@@ -44,6 +44,8 @@ var long = 127.0461243;
 
 var overlay_location = "마켓오 도곡점";
 
+var heartImg = "https://i.imgur.com/4ruXDon.png";
+var openImg = "https://i.imgur.com/yWGfRFd.png";
 var images = [
   {
     "small":"https://i.imgur.com/n2lpmpYh.jpg",
@@ -58,16 +60,24 @@ var images = [
     "large":"https://i.imgur.com/UTbJQKn.jpg"
   },
   {
-    "small":"https://i.imgur.com/w4wfRTSh.jpg",
-    "large":"https://i.imgur.com/w4wfRTS.jpg"
+    "small":"https://i.imgur.com/o2e4Mpuh.jpg",
+    "large":"https://i.imgur.com/o2e4Mpu.jpg"
+  },
+  {
+    "small":"https://i.imgur.com/45RYYqih.jpg",
+    "large":"https://i.imgur.com/45RYYqi.jpg"
+  },
+  {
+    "small":"https://i.imgur.com/qWIXVPeh.jpg",
+    "large":"https://i.imgur.com/qWIXVPe.jpg"
   },
   {
     "small":"https://i.imgur.com/e6svNATh.jpg",
     "large":"https://i.imgur.com/e6svNAT.jpg"
   },
   {
-    "small":"https://i.imgur.com/hlHiaGOh.jpg",
-    "large":"https://i.imgur.com/hlHiaGO.jpg"
+    "small":"https://i.imgur.com/uJ3FmDPh.jpg",
+    "large":"https://i.imgur.com/uJ3FmDP.jpg"
   },
   {
     "small":"https://i.imgur.com/PmAacg2h.jpg",
@@ -85,14 +95,7 @@ var images = [
     "small":"https://i.imgur.com/uOKm45wh.jpg",
     "large":"https://i.imgur.com/uOKm45w.jpg"
   },
-  {
-    "small":"https://i.imgur.com/RYsSw83h.jpg",
-    "large":"https://i.imgur.com/RYsSw83.jpg"
-  },
-  {
-    "small":"https://i.imgur.com/56ynsiLh.jpg",
-    "large":"https://i.imgur.com/56ynsiL.jpg"
-  },
+
   {
     "small":"https://i.imgur.com/0wuPGgsh.jpg",
     "large":"https://i.imgur.com/0wuPGgs.jpg"

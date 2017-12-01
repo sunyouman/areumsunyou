@@ -41,7 +41,6 @@ body, html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  /*background-color: black;*/
 }
 
 .page-loading {
@@ -154,14 +153,18 @@ body, html {
 
 #info-title {
   font-size: 20px;
-  line-height: 2.3em;
+  margin-top: 15px;
   color:rgba(255, 255, 255, 0.85);
   font-weight: bold;
 }
 #info-text {
   font-size: 15px;
   line-height: 2.0em;
-  margin-top: 20px;
+}
+
+.info-box hr {
+  background-color: white;
+  height: 1px;
 }
 
 #location-title {
@@ -203,7 +206,7 @@ body, html {
 #photo-title {
   font-size: 20px;
   line-height: 2.3em;
-  color:rgba(0, 0, 0, 0.85);
+  color:rgba(239, 129, 129, 0.85);
   font-weight: bold;
   padding-top: 40px;
 }
@@ -245,10 +248,9 @@ h3 {
 
 .page-photo {
   min-height: 600px;
-  background-color: #bbb;
-  color: red;
-
+  background-color: #fff4f5
 }
+
 .container {
   padding-right: 0px;
   padding-left: 0px;
@@ -303,6 +305,7 @@ h3 {
 .photo-menu-wrapper {
   max-width: 100%;
   max-height: 100%;
+  border: 2px solid #ffd2d2;
 }
 
 .photo-menu {
