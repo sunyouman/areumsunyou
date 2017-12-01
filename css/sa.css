@@ -205,10 +205,19 @@ body, html {
 
 #photo-title {
   font-size: 20px;
-  line-height: 2.3em;
-  color:rgba(239, 129, 129, 0.85);
+  color:#f9b6c1;
   font-weight: bold;
-  padding-top: 40px;
+  padding-top: 60px;
+}
+
+.photo-divider {
+  background-image: url("https://i.imgur.com/gOCgj2h.png");
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 h3 {
