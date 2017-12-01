@@ -269,6 +269,10 @@ h3 {
   color: #000;
 }
 
+.lazyload {
+  background-color: white;
+}
+
 .photo-grid-item img {
 	display: block;
 	max-width:100%;

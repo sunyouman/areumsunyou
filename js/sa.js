@@ -156,7 +156,7 @@ function setPhotoGrid() {
 	for ( var idx in images ) {
 		var item = '<div class="photo-grid-item col-6 col-sm-6 col-md-4 col-lg-4">'
       +'<div class="photo-menu-wrapper">'
-      +'<img class="lazyload" data-src="'+images[idx]['small']+'"  data-origin-src="'+images[idx]['large']+'"></div></div>';
+      +'<img class="lazyload" src="https://i.imgur.com/Kedr5Db.gif" data-src="'+images[idx]['small']+'"  data-origin-src="'+images[idx]['large']+'"></div></div>';
     $('.photo-grid').append(item);
 	}
 
