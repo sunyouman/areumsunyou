@@ -206,7 +206,7 @@ body, html {
   font-size: 20px;
   color:#f9b6c1;
   font-weight: bold;
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 .photo-divider {
@@ -215,8 +215,15 @@ body, html {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  background-origin: content-box;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.photo-divider.reverse {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  transform: rotate(180deg);
 }
 
 h3 {
